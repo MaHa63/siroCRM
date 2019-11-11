@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4 col-sm-offset-4 text-center">
+      <h3>Kirjaudu</h3>
+
+      <%= bootstrap_form_for( resource,
+                              as: resource_name,
+                              url: session_path(resource_name)) do |f| %>
+
+          <%= f.email_field :email,
+                            autofocus: true,
+                            class: 'form_control',
+                            label: 'Tunnus (Sähköposti)' %>
+
+          <%= f.password_field  :password,
+                                autocomplete: "off",
+                                class: 'form-control',
+                                label: 'Salasana' %>
+
+          <% if devise_mapping.rememberable? -%>
+            <%= f.check_box :remember_me, label: '  Muista' %>
+          <% end %>
+
+          <%= f.submit "Kirjaudu", class: 'btn login-button' %>
+      <% end %>
+    </div>
+  </div>
+</div>
