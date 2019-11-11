@@ -13,5 +13,6 @@ module DeviseApp
     # -- all .rb files in that directory are automatically loaded.
 
     config.action_controller.include_all_helpers = false
+    config.i18n.default_locale = :fi
   end
 end
