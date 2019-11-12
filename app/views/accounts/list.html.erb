@@ -1,0 +1,13 @@
+<% if @accounts.blank? %>
+	<p>Järjestelmään ei ole talletettu yrityksiä.</p>
+<% else %>
+	<p>Yritykset:</p>
+
+	<ul id = "accounts">
+		<% @accounts.each do |account| %>
+			<li><%= link_to account.name, { :action => 'show', :id => account.id} -%></li>
+		<% end %>
+	</ul>
+<% end %>
+
+<p><%= link_to "Lisää uusi yritys", {:action => 'new'} %></p>
