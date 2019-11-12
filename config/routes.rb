@@ -14,5 +14,17 @@ Rails.application.routes.draw do
   	get 'signup', to: 'devise/registrations#new'
   end
 
+  # resources :accounts
+  
+  get   'accounts/list'
+  get   'accounts/new'
+  post  'accounts/create'
+  patch 'accounts/update'
+  get   'accounts/list'
+  get   'accounts/show'
+  get   'accounts/edit'
+  get   'accounts/delete'
+  get   'accounts/update'
+  get   'accounts/show_users'
 
 end
